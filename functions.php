@@ -10,7 +10,7 @@ function register_menus() {
   register_nav_menu('footer', __('Footer Menu'));
 }
 
-add_action('after_setup_theme', 'register_menus');
+//add_action('after_setup_theme', 'register_menus');
 
 function register_meta_box() {
   add_meta_box('meta1', __('Visibility'), 'meta_box_callback', null, 'side', 'high');
@@ -49,7 +49,7 @@ function meta_box_save_data($post_id) {
 add_action('add_meta_boxes', 'register_meta_box');
 add_action('save_post', 'meta_box_save_data');
 
-function theme_update() {
+function theme_update($transient) {
   $response = wp_remote_get('https://raw.githubusercontent.com/nmcardoso/splus-theme/zipball/version.txt');
   if (is_wp_error($response)) {
     return;
@@ -67,10 +67,12 @@ function theme_update() {
     $fields['package'] = 'https://github.com/nmcardoso/splus-theme/blob/zipball/zipball.zip?raw=true';
     $fields['requires'] = '4.0';
     $fields['requires_php'] = '5.6';
-    $transient = get_site_transient('update_themes');
+    //$transient = get_site_transient('update_themes');
     $transient->response['splus-theme'] = $fields;
-    set_site_transient('update_themes', $transient);
+    //set_site_transient('update_themes', $transient);
   }
+  
+  return $transient;
 }
 
 add_filter('pre_set_site_transient_update_themes', 'theme_update');
@@ -84,8 +86,15 @@ function theme_version_setup() {
   $curr_version = get_site_option('splus_theme_version', 'none');
   $remote_version = $response['body'];
   
-  set_site_option('splus_theme_version', $remote_version);
+  update_site_option('splus_theme_version', $remote_version);
 }
 
-add_action('after_setup_theme', 'theme_version_setup');
+add_action('upgrader_process_complete', 'theme_version_setup');
+
+function theme_setup() {
+  register_menus();
+  //theme_version_setup();
+}
+
+add_action('after_setup_theme', 'theme_setup');
 
