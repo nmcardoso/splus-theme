@@ -23,5 +23,3 @@ var_dump($transient);
 //update_site_option('splus_theme_version', 'build+none');
 var_dump(get_site_option('splus_theme_version', 'none'));
 
-
-
