@@ -1,0 +1,22 @@
+language: minimal
+sudo: false
+
+cache: bundler
+
+branches:
+  only:
+  - master
+
+before_script:
+  - chmod -R +x ci-scripts/
+
+script: 
+  - ./ci-scripts/build.sh
+
+deploy:
+  provider: script
+  skip-cleanup: true
+  script: 
+    - ./ci-scripts/deploy.sh
+  on:
+    branch: master
