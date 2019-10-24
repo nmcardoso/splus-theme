@@ -1,2 +1,2 @@
 mkdir zipball
-git archive --prefix=splus-theme/ -o zipball/zipball.zip
+git archive --prefix=splus-theme/ -o zipball/zipball.zip HEAD
