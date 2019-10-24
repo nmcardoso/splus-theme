@@ -50,6 +50,11 @@ add_action('add_meta_boxes', 'register_meta_box');
 add_action('save_post', 'meta_box_save_data');
 
 function theme_update($transient) {
+  $env = getenv('PHP_ENV');
+  if ($env !== false && $env == 'DEV') {
+    return;
+  }
+
   $response = wp_remote_get('https://raw.githubusercontent.com/nmcardoso/splus-theme/zipball/version.txt');
   if (is_wp_error($response)) {
     return;
