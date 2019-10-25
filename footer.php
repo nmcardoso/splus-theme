@@ -2,7 +2,9 @@
     <div class="container py-4">
       <div class="row">
         <div class="col-3">
-          <img class="ml-auto" src="<?php bloginfo('template_url'); ?>/img/splus@2x.png" width="80%" alt="splus logo">
+          <div style="max-width: 170px;">
+            <img class="ml-auto" src="<?php bloginfo('template_url'); ?>/img/splus@2x.png" width="100%" alt="splus logo">
+          </div>
           <p class="pt-2">S-PLUS is an international collaboration founded by Universidade de Sao Paulo, Observatório Nacional, Universidade Federal de Sergipe, Universidad de La Serena and Universidade Federal de Santa Catarina.</p>
         </div>
         <div class="col-3 pl-5">
