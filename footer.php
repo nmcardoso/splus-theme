@@ -24,10 +24,10 @@
         <div class="col-6 text-center">
           <h4>ACKNOWLEDGMENTS</h4>
           <ul class="logos">
-            <li><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/fapesp@2x.png" height="60px" alt=""></a></li>
-            <li><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/on@2x.png" height="60px" alt=""></a></li>
-            <li><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/inpe@2x.png" height="60px" alt=""></a></li>
-            <li><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/logo@2x.png" height="60px" alt=""></a></li>
+            <li><a href="#"><img class="mr-2 mt-2" src="<?php bloginfo('template_url'); ?>/img/fapesp@2x.png" height="60px" alt=""></a></li>
+            <li><a href="#"><img class="mr-2 mt-2" src="<?php bloginfo('template_url'); ?>/img/on@2x.png" height="60px" alt=""></a></li>
+            <li><a href="#"><img class="mr-2 mt-2" src="<?php bloginfo('template_url'); ?>/img/inpe@2x.png" height="60px" alt=""></a></li>
+            <li><a href="#"><img class="mr-2 mt-2" src="<?php bloginfo('template_url'); ?>/img/logo@2x.png" height="60px" alt=""></a></li>
           </ul>
         </div>
       </div>
