@@ -27,10 +27,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <?php get_header(); ?>
 <?php include_once('includes/icons.php'); ?>
+<?php include_once('includes/img-to-base64.php'); ?>
 
 <style type="text/css">
 html, body {
-  background-image: url('https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1514&q=80');
+	background-image: url(<?php img_to_base64(__DIR__ . '/img/login_bg.png'); ?>);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
