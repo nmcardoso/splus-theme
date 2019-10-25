@@ -52,7 +52,7 @@ add_action('save_post', 'meta_box_save_data');
 function theme_update($transient) {
   $env = getenv('PHP_ENV');
   if ($env !== false && $env == 'DEV') {
-    return;
+    return $transient;
   }
 
   $response = wp_remote_get('https://raw.githubusercontent.com/nmcardoso/splus-theme/zipball/version.txt');
