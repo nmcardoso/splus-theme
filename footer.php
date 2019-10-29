@@ -14,6 +14,9 @@
           $locations = get_nav_menu_locations();
           $menu_id = $locations[$menu_name];
           $items = wp_get_nav_menu_items($menu_id);
+          $items = array_filter($items, function($i) {
+            return (int)$i->menu_item_parent == 0;
+          });
           ?>
           <ul class="quick-links">
             <?php foreach($items as $item): ?>

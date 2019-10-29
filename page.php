@@ -13,6 +13,10 @@ get_template_part('partials/navbar');
   </div>
 </section>
 
+<?php
+get_template_part('partials/submenus');
+?>
+
 <main class="page-content">
   <section class="mt-5 pt-5">
     <div class="container">
