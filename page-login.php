@@ -1,6 +1,13 @@
 <?php
+$url = "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$parts = parse_url($url);
+parse_str($parts['query'], $query);
 
 if (is_user_logged_in()) {
+	if ($query['action'] === 'logout') {
+		wp_logout();
+	}
+
 	wp_redirect(home_url());
 	exit;
 }
