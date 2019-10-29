@@ -22,19 +22,11 @@
       foreach ($items as $item):
         $active = $item->object_id == get_the_ID() ? 'active' : '';
         $post_meta = get_post_meta($item->object_id);
-        $show = true;
-        if (isset($post_meta['_meta_is_private']) && 
-            $post_meta['_meta_is_private'][0] == 'private'):
-          $show = is_user_logged_in();
-        endif;
-
-        if ($show):
       ?>
       <li class="nav-item">
         <a class="nav-link <?php echo $active; ?>" href="<?php echo $item->url; ?>"><?php echo $item->title; ?></a>
       </li>
       <?php
-        endif;
       endforeach;
       if (!is_user_logged_in()):
       ?>
