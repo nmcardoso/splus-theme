@@ -24,7 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (is_wp_error($user)) {
 		echo $user->get_error_message();
 	} else {
-		var_dump($user);
+		wp_redirect(home_url());
+		exit;
 	}
 
 	return;
