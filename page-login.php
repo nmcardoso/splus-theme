@@ -3,6 +3,8 @@ $url = "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $parts = parse_url($url);
 parse_str($parts['query'], $query);
 
+$error = null;
+
 if (is_user_logged_in()) {
 	if ($query['action'] === 'logout') {
 		wp_logout();
@@ -22,12 +24,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$user = wp_signon($creds);
 
 	if (is_wp_error($user)) {
-		echo $user->get_error_message();
+		$error = $user->get_error_message();
 	} else {
-		var_dump($user);
+		wp_redirect(home_url());
+		exit;
 	}
-
-	return;
 }
 
 ?>
@@ -101,6 +102,11 @@ input.form-control {
 				</div>
 			</div>
 			<div class="card-body">
+				<?php if (!empty($error)): ?>
+				<div class="alert alert-danger" style="font-size:.9rem;">
+				<?php echo $error; ?>
+				</div>
+				<?php endif; ?>
 				<form action="" method="POST">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
