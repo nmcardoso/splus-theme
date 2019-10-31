@@ -22,6 +22,12 @@ img {
   max-width: 100% !important;
 }
 
+table.wp-block-table {
+  display: block;
+  overflow: auto;
+  max-width: 100%;
+}
+
 nav.navbar {
   position: fixed;
   width: 100%;
@@ -278,6 +284,7 @@ section.page-hero h1 {
   text-transform: uppercase;
   font-size: 2rem;
   letter-spacing: 3.44px;
+  word-wrap: break-word;
 }
 
 main.page-content section h1 {
