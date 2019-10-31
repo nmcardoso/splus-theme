@@ -43,6 +43,6 @@ get_template_part('partials/submenus');
   </section>
 </main>
 
-<?php get_template_part('partials/footer.php'); ?>
+<?php get_template_part('partials/footer'); ?>
 
 <?php get_footer(); ?>
