@@ -59,6 +59,11 @@ const bsColumns = () => {
   })
 }
 
+const registerFormOverlay = (e) => {
+  $('#overlay').css('display', 'flex')
+  $(e).children(':input').attr('disabled', 'disabled')
+}
+
 $(document).ready(e => {
   if (!('scrollBehavior' in document.documentElement.style)) {
     smoothScrollPolyfill()
@@ -67,4 +72,6 @@ $(document).ready(e => {
   navbarPosition()
 
   bsColumns()
+
+  $('#register_form').submit(registerFormOverlay)
 })
