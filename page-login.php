@@ -1,12 +1,15 @@
 <?php
 $url = "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $parts = parse_url($url);
-parse_str($parts['query'], $query);
+$query = array();
+if (isset($parts['query'])) {
+	parse_str($parts['query'], $query);
+}
 
 $error = null;
 
 if (is_user_logged_in()) {
-	if ($query['action'] === 'logout') {
+	if (isset($query['action']) && $query['action'] === 'logout') {
 		wp_logout();
 	}
 

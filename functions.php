@@ -1,5 +1,12 @@
 <?php
 
+$dev_mode = getenv('PHP_ENV');
+if ($_dev_mode !== false && $dev_mode === 'DEV') {
+  ini_set('display_startup_errors', 1);
+  ini_set('display_errors', 1);
+  error_reporting(-1);
+}
+
 function register_menus() {
   // register_nav_menus(array(
   //   'primary' => __('Primary Menu', 'splus'),
@@ -103,3 +110,27 @@ function theme_setup() {
 
 add_action('after_setup_theme', 'theme_setup');
 
+function redirect_subscribers() {
+  if (current_user_can('subscriber')) {
+    wp_redirect(home_url());
+    exit;
+  }
+}
+
+add_action('admin_init', 'redirect_subscribers');
+
+function block_unauthorized_users($user, $username, $password) {
+  if (is_wp_error($user)) {
+    return $user;
+  }
+
+  $auth = get_user_meta($user->ID, 'splus_user_authorized', false);
+  
+  if ($auth === 'true') {
+    return $user;
+  } else {
+    return new WP_Error('user_unauthorized', 'User unauthorized. Wait for staff to approve your registration');
+  }
+}
+
+add_filter('authenticate', 'block_unauthorized_users', 99, 3);
