@@ -82,4 +82,6 @@ get_template_part('partials/navbar');
     */?>
   </main>
 
+<?php get_template_part('partials/footer.php'); ?>
+
 <?php get_footer(); ?>
