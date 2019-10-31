@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <style type="text/css">
 html, body {
-	background-image: url(<?php img_to_base64(__DIR__ . '/img/login_bg.png'); ?>);
+	background-image: url(<?php bloginfo('template_url'); ?>/img/login_bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
