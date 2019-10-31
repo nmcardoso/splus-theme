@@ -25,6 +25,7 @@ function get_authorized_email($email) {
   $template = file_get_contents(__DIR__ . '/authorized_email.html');
   $template = str_replace('{{email}}', $email, $template);
   $template = str_replace('{{login_url}}', get_site_url() . '/login', $template);
+  $template = str_replace('{{logo_url}}', get_template_directory_uri() . '/img/splus@2x.png', $template);
 
   return $template;
 }
