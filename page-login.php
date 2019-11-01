@@ -137,8 +137,8 @@ input.form-control {
 				</form>
 			</div>
 			<div class="card-footer">
-				<div class="d-flex justify-content-center">
-					<a class="text-light" href="#">Forgot your password?</a>
+				<div class="d-flex justify-content-end">
+					<a class="text-light" href="/register">Register</a>
 				</div>
 			</div>
 		</div>
