@@ -1,8 +1,6 @@
 language: minimal
 sudo: false
 
-cache: bundler
-
 branches:
   only:
   - master
