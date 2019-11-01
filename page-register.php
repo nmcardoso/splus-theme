@@ -244,8 +244,8 @@ function valid_class($k, $var) {
 
   body {
     height: 100%;
-    background: rgb(161, 34, 195);
-    background: linear-gradient(168deg, rgba(161, 34, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    background-image: url(<?php bloginfo('template_url'); ?>/img/login_bg.png);
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Open Sans', sans-serif;
