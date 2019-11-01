@@ -74,4 +74,6 @@ $(document).ready(e => {
   bsColumns()
 
   $('#register_form').submit(registerFormOverlay)
+
+  $('body').tooltip({ selector: '[data-toggle=tooltip]' })
 })

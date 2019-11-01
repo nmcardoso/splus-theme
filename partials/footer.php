@@ -27,10 +27,10 @@
       <div class="col-lg-5">
         <h4>ACKNOWLEDGMENTS</h4>
         <ul class="logos text-center">
-          <li><a href="#"><img class="mr-2 mt-2" src="<?php bloginfo('template_url'); ?>/img/fapesp@2x.png" height="60px" alt=""></a></li>
-          <li><a href="#"><img class="mr-2 mt-2" src="<?php bloginfo('template_url'); ?>/img/on@2x.png" height="60px" alt=""></a></li>
-          <li><a href="#"><img class="mr-2 mt-2" src="<?php bloginfo('template_url'); ?>/img/inpe@2x.png" height="60px" alt=""></a></li>
-          <li><a href="#"><img class="mr-2 mt-2" src="<?php bloginfo('template_url'); ?>/img/logo@2x.png" height="60px" alt=""></a></li>
+          <li><a href="http://www.fapesp.br" target="_blank" data-toggle="tooltip" data-placement="top" title="FAPESP - Fundação de Amparo à Pesquisa do Estado de São Paulo"><img class="mr-3 mt-2" src="<?php bloginfo('template_url'); ?>/img/logo_fapesp.png" height="42px" alt="Fapesp"></a></li>
+          <li><a href="https://on.br" target="_blank" data-toggle="tooltip" data-placement="top" title="ON - Observatório Nacional"><img class="mr-3 mt-2" src="<?php bloginfo('template_url'); ?>/img/logo_ON.png" height="42px" alt="ON"></a></li>
+          <li><a href="http://www.inpe.br" target="_blank" data-toggle="tooltip" data-placement="top" title="INPE - Instituto Nacional de Pequisas Espaciais"><img class="mr-3 mt-2" src="<?php bloginfo('template_url'); ?>/img/logo_inpe.png" height="42px" alt="INPE"></a></li>
+          <li><a href="https://www.cefca.es" target="_blank" data-toggle="tooltip" data-placement="top" title="CEFCA - Centro de Estudios de Física del Cosmos de Aragón"><img class="mr-3 mt-2" src="<?php bloginfo('template_url'); ?>/img/logo_cefca.png" height="42px" alt="CEFCA"></a></li>
         </ul>
       </div>
     </div>
