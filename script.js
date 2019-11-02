@@ -76,4 +76,8 @@ $(document).ready(e => {
   $('#register_form').submit(registerFormOverlay)
 
   $('body').tooltip({ selector: '[data-toggle=tooltip]' })
+
+  $('.collapse').collapse({
+    toggle: false
+  })
 })
