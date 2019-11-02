@@ -135,3 +135,26 @@ function block_unauthorized_users($user, $username, $password) {
 }
 
 add_filter('authenticate', 'block_unauthorized_users', 99, 3);
+
+function su_spoiler_handler($attrs, $content, $tag) {
+  static $index = 1;
+
+  $title = $attrs['title'];
+  
+  $html = '<div class="pb-2">';
+  $html .= '<a class="" data-toggle="collapse" href="#coll' . $index . '">';
+  $html .= $title;
+  $html .= '</a>';
+  $html .= '<div class="collapse" id="coll' . $index . '">';
+  $html .= '<div class="card card-body">';
+  $html .= $content;
+  $html .= '</div>';
+  $html .= '</div>';
+  $html .= '</div>';
+
+  $index++;
+
+  return $html;
+}
+
+add_shortcode('su_spoiler', 'su_spoiler_handler');
