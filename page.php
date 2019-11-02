@@ -37,7 +37,7 @@ get_template_part('partials/submenus');
       </div>
       <div class="pb-5"></div>
       <?php else:
-      echo $p->post_content;
+      echo do_shortcode($p->post_content);
       endif; ?>
     </div>
   </section>
