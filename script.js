@@ -59,6 +59,11 @@ const bsColumns = () => {
   })
 }
 
+const bsTables = () => {
+  $('.wp-block-table').addClass('table')
+  $('.is-style-stripes').addClass('table-striped')
+}
+
 const registerFormOverlay = (e) => {
   $('#overlay').css('display', 'flex')
   $(e).children(':input').attr('disabled', 'disabled')
@@ -72,6 +77,8 @@ $(document).ready(e => {
   navbarPosition()
 
   bsColumns()
+
+  bsTables()
 
   $('#register_form').submit(registerFormOverlay)
 
