@@ -147,7 +147,7 @@ function su_spoiler_handler($attrs, $content, $tag) {
   $html .= '</a>';
   $html .= '<div class="collapse" id="coll' . $index . '">';
   $html .= '<div class="card card-body">';
-  $html .= $content;
+  $html .= do_shortcode($content);
   $html .= '</div>';
   $html .= '</div>';
   $html .= '</div>';
