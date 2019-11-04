@@ -216,6 +216,13 @@ main#home section p {
   padding-right: 2.2rem;
   padding-top: .7rem;
   padding-bottom: .7rem;
+  transition: background .5s ease, color .5s ease;
+}
+
+.btn.base:hover {
+  color: #fff;
+  background-color: #04151F;
+  background-image: url('img/ic_arrow_right_hover.svg');
 }
 
 .spacing-10 {
