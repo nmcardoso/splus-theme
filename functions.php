@@ -158,3 +158,51 @@ function su_spoiler_handler($attrs, $content, $tag) {
 }
 
 add_shortcode('su_spoiler', 'su_spoiler_handler');
+
+function gallery_shortcode_handler($attrs, $content, $tag) {
+  $defaults = array(
+    'id' => '',
+    'class' => ''
+  );
+
+  $attrs = shortcode_atts($defaults, $attrs);
+  
+  if (empty($attrs['id'])) {
+    return '';
+  }
+  
+  static $index = 0;
+  $index++;
+
+  $ids = explode(',', $attrs['id']);
+  $ids = array_map(function ($id) { return (int) trim($id); }, $ids);
+
+  $html = '<div id="carousel-' . $index . '" class="carousel slide ' . $attrs['class'] . '" data-ride="carousel" style="background-color: black; height: 300px; max-height: 100%;">';
+  $html .= '<div class="carousel-inner" style="height: 100%;">';
+
+  foreach ($ids as $i => $id) {
+    if ($i == 0) {
+      $html .= '<div class="carousel-item active" style="height: 100%;">';
+    } else {
+      $html .= '<div class="carousel-item" style="height: 100%;">';
+    }
+
+    $html .= '<img style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); ';
+    $html .= 'max-height: 800px; width: auto;" src="' . wp_get_attachment_image_src($id, 'original')[0] . '" />';
+    $html .= '</div>';
+  }
+
+  $html .= '<a href="#carousel-' . $index . '" class="carousel-control-prev" data-slide="prev">';
+  $html .= '<span class="carousel-control-prev-icon"></span>';
+  $html .= '</a>';
+  $html .= '<a href="#carousel-' . $index . '" class="carousel-control-next" data-slide="next">';
+  $html .= '<span class="carousel-control-next-icon"></span>';
+  $html .= '</a>';
+
+  $html .= '</div>';
+  $html .= '</div>';
+
+  return $html;
+}
+
+add_shortcode('gallery', 'gallery_shortcode_handler');
