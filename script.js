@@ -64,6 +64,10 @@ const bsTables = () => {
   $('.is-style-stripes').addClass('table-striped')
 }
 
+const bsGallery = () => {
+  $('.carousel').carousel()
+}
+
 const registerFormOverlay = (e) => {
   $('#overlay').css('display', 'flex')
   $(e).children(':input').attr('disabled', 'disabled')
@@ -79,6 +83,8 @@ $(document).ready(e => {
   bsColumns()
 
   bsTables()
+
+  bsGallery()
 
   $('#register_form').submit(registerFormOverlay)
 
