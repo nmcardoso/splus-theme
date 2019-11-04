@@ -18,7 +18,7 @@ get_template_part('partials/navbar');
   <?php
   
   $p = get_post();
-  echo $p->post_content;
+  echo do_shortcode($p->post_content);
 
   ?>
 
