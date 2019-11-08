@@ -28,6 +28,11 @@ table.wp-block-table {
   max-width: 100%;
 }
 
+.page-content h1, .page-content h2, .page-content h3, .page-content h4 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
 nav.navbar {
   position: fixed;
   width: 100%;
