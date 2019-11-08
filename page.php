@@ -24,7 +24,7 @@ get_template_part('partials/submenus');
 ?>
 
 <main class="page-content">
-  <section class="mt-5 pt-5">
+  <section class="mt-5">
     <div class="container">
       <?php if (!is_user_logged_in() &&  $visibility === 'private'): ?>
       <div class="jumbotron">
