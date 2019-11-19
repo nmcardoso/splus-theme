@@ -1,7 +1,6 @@
 <?php
 
-$dev_mode = getenv('PHP_ENV');
-if ($_dev_mode !== false && $dev_mode === 'DEV') {
+if (WP_DEBUG) {
   ini_set('display_startup_errors', 1);
   ini_set('display_errors', 1);
   error_reporting(-1);
