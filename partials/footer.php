@@ -12,11 +12,16 @@
         <?php
         $menu_name = 'footer';
         $locations = get_nav_menu_locations();
-        $menu_id = $locations[$menu_name];
-        $items = wp_get_nav_menu_items($menu_id);
-        $items = array_filter($items, function($i) {
-          return (int)$i->menu_item_parent == 0;
-        });
+
+        if (array_key_exists($menu_name, $locations)) {
+          $menu_id = $locations[$menu_name];
+          $items = wp_get_nav_menu_items($menu_id);
+          $items = array_filter($items, function($i) {
+            return (int)$i->menu_item_parent == 0;
+          });
+        } else {
+          $items = [];
+        }
         ?>
         <ul class="quick-links">
           <?php foreach($items as $item): ?>
