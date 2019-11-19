@@ -1,6 +1,7 @@
 <?php
 
 include_once(__DIR__ . '/includes/email-helper.php');
+include_once('includes/class-mailer.php');
 
 $errors = array();
 $firstname = '';
@@ -112,27 +113,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $confirm_url = get_site_url() . '/register?user=' . $username . '&token=' . $email_ver_token;
 
     // Email
-    $mail = array(
-      'to' => $email,
-      'subject' => 'SPLUS email confirmation',
-      'html' => get_validate_email($email, $confirm_url)
-    );
+    $mailer = new Mailer();
+    $mailer->setSubject('[SPLUS] Please verify your email address.');
+    $mailer->addAddress($email, $firstname);
+    $mailer->html(get_validate_email($email, $confirm_url));
 
-    $options = array(
-      'headers' => array('Content-Type' => 'application/json; charset=utf-8'),
-      'body' => json_encode($mail),
-      'method' => 'POST',
-      'data_format' => 'body'
-    );
-
-    $resp = wp_remote_post('https://splus-mailer.glitch.me/mail', $options);
-
-    $body = json_decode(wp_remote_retrieve_body($resp), true);
-
-    if (empty($body) || $body['success'] == false) {
-      $error['register'] = 'Sorry. An error occurred during registration. Try again later.';
-    } else {
+    if ($mailer->send()) {
       $register_success = true;
+    } else {
+      $error['register'] = 'Sorry. An error occurred during registration. Try again later.';
     }
   }
 } else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
@@ -161,29 +150,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $auth_token = get_user_meta($user->ID, 'splus_user_authorization_token', true);
       $auth_url = get_site_url() . '/register?user=' . $user->user_login . '&auth_token=' . $auth_token;
 
-      $mail = array(
-        'to' => 'splus.team@yahoo.com',
-        'subject' => 'SPLUS user authorization',
-        'html' => get_auth_email($name, $email, $institution, $position, $auth_url)
-      );
+      $mailer = new Mailer();
+      $mailer->setSubject('[SPLUS] New user authorization request.');
+      $mailer->addAddress(get_option('splus_smtp_email', 'splus.team@yahoo.com'), 'SPLUS Staff');
+      $mailer->html(get_auth_email($name, $email, $institution, $position, $auth_url));
 
-      $options = array(
-        'headers' => array('Content-Type' => 'application/json; charset=utf-8'),
-        'body' => json_encode($mail),
-        'method' => 'POST',
-        'data_format' => 'body'
-      );
-
-      $resp = wp_remote_post('https://splus-mailer.glitch.me/mail', $options);
-
-      $body = json_decode(wp_remote_retrieve_body($resp), true);
-
-      if (empty($body) || $body['success'] == false) {
-        $error['verification'] = 'Sorry. An error occurred during email verification. Try again later.';
-      } else {
+      if ($mailer->send()) {
         update_user_meta($user->ID, 'splus_email_verified', 'true');
         delete_user_meta($user->ID, 'splus_email_verification_token');
         $email_verification_success = true;
+      } else {
+        $error['verification'] = 'Sorry. An error occurred during email verification. Try again later.';
       }
     }
   } else if (count($query) == 2 && isset($query['user']) && isset($query['auth_token'])) {
@@ -197,29 +174,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       // Email
       $email = $user->user_email;
 
-      $mail = array(
-        'to' => $email,
-        'subject' => 'SPLUS Registration Authorized',
-        'html' => get_authorized_email($email)
-      );
+      $mailer = new Mailer();
+      $mailer->setSubject('[SPLUS] Your registration has been approved.');
+      $mailer->addAddress($email, $user->first_name);
+      $mailer->html(get_authorized_email($email));
 
-      $options = array(
-        'headers' => array('Content-Type' => 'application/json; charset=utf-8'),
-        'body' => json_encode($mail),
-        'method' => 'POST',
-        'data_format' => 'body'
-      );
-
-      $resp = wp_remote_post('https://splus-mailer.glitch.me/mail', $options);
-
-      $body = json_decode(wp_remote_retrieve_body($resp), true);
-
-      if (empty($body) || $body['success'] == false) {
-        $error['authorization'] = 'Sorry. An error occurred during user authorization. Try again later.';
-      } else {
+      if ($mailer->send()) {
         update_user_meta($user->ID, 'splus_user_authorized', 'true');
         delete_user_meta($user->ID, 'splus_user_authorization_token');
         $user_authorization_success = true;
+      } else {
+        $error['authorization'] = 'Sorry. An error occurred during user authorization. Try again later.';
       }
     }
   }
