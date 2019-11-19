@@ -56,8 +56,7 @@ add_action('add_meta_boxes', 'register_meta_box');
 add_action('save_post', 'meta_box_save_data');
 
 function theme_update($transient) {
-  $env = getenv('PHP_ENV');
-  if ($env !== false && $env == 'DEV') {
+  if (WP_DEBUG) {
     return $transient;
   }
 
@@ -205,3 +204,43 @@ function gallery_shortcode_handler($attrs, $content, $tag) {
 }
 
 add_shortcode('gallery', 'gallery_shortcode_handler');
+
+function dashboard_menu() {
+  add_menu_page(
+    'SPLUS Configurations',
+    'SPLUS',
+    'manage_options',
+    'splus-config',
+    'dashboard_main_page',
+    'dashicons-admin-generic',
+    2
+  );
+
+  add_submenu_page(
+    'splus-config',
+    'SPLUS Settings',
+    'SPLUS Settings',
+    'manage_options',
+    'splus-config',
+    'dashboard_main_page'
+  );
+
+  add_submenu_page(
+    'splus-config',
+    'Email Settings',
+    'Email',
+    'manage_options',
+    'splus-config-email',
+    'dashboard_email_page'
+  );
+}
+
+add_action('admin_menu', 'dashboard_menu');
+
+function dashboard_main_page() {
+  include_once('partials/dashboard-main.php');
+}
+
+function dashboard_email_page() {
+  include_once('partials/dashboard-email.php');
+}
