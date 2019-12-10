@@ -245,6 +245,33 @@ function dashboard_email_page() {
   include_once('partials/dashboard-email.php');
 }
 
+function javascript_user_object() {
+  if (is_user_logged_in()) {
+    $user = wp_get_current_user();
+    $selected_attrs = array(
+      'email' => $user->user_email,
+      'id' => $user->ID,
+      'name' => $user->display_name
+    );
+    $user_string = json_encode($selected_attrs);
+    $output = <<<SCRIPT
+<script type="text/javascript">
+  var userObj = $user_string
+</script>
+SCRIPT;
+  } else {
+    $output = <<<SCRIPT
+<script type="text/javascript">
+  var userObj =  null;
+</script>
+SCRIPT;  
+  }
+
+  echo $output;
+}
+
+add_action('wp_head', 'javascript_user_object');
+
 // Remove top margin for wordpress admin bar
 function my_filter_head() {
   remove_action('wp_head', '_admin_bar_bump_cb');
@@ -252,3 +279,35 @@ function my_filter_head() {
 
 add_action('get_header', 'my_filter_head');
 
+function contact_form_handler() {
+  include_once 'includes/class-mailer.php';
+
+  $message = $_POST['message'];
+  $email = $_POST['email'];
+  $name = $_POST['name'];
+
+  $email_content = <<<EMAIL
+<p>New message received via website contact form</p>
+
+<p>
+User: <span style="text-transform: uppercase;"><b>$name</b></span><br>
+Email: <b>$email</b>
+</p>
+
+<br>
+<p style="font-size: 14px;">$message</p>
+
+<br>
+<hr>
+
+<i>Email sent via splus website</i>
+EMAIL;
+
+  $mailer = new Mailer();
+  $mailer->setSubject("[SPLUS] Contact Form: $name");
+  $mailer->addAddress('splus.team@yahoo.com', 'SPLUS Staff');
+  $mailer->html($email_content);
+  $mailer->send();
+}
+
+add_action('admin_post_contact_form', 'contact_form_handler');
