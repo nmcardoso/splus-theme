@@ -35,12 +35,22 @@
         </ul>
       </div>
       <div class="col-lg-5">
-        <h4>ACKNOWLEDGMENTS</h4>
-        <ul class="logos text-center">
-          <li><a href="http://www.fapesp.br" target="_blank" data-toggle="tooltip" data-placement="top" title="FAPESP - Fundação de Amparo à Pesquisa do Estado de São Paulo"><img class="mr-3 mb-4 mb-lg-0" src="<?php bloginfo('template_url'); ?>/img/logo_fapesp.png" height="42px" alt="Fapesp"></a></li>
-          <li><a href="https://on.br" target="_blank" data-toggle="tooltip" data-placement="top" title="ON - Observatório Nacional"><img class="mr-3 mb-4 mb-lg-0" src="<?php bloginfo('template_url'); ?>/img/logo_ON.png" height="42px" alt="ON"></a></li>
-          <li><a href="http://www.inpe.br" target="_blank" data-toggle="tooltip" data-placement="top" title="INPE - Instituto Nacional de Pequisas Espaciais"><img class="mr-3 mb-4 mb-lg-0" src="<?php bloginfo('template_url'); ?>/img/logo_inpe.png" height="42px" alt="INPE"></a></li>
-          <li><a href="https://www.cefca.es" target="_blank" data-toggle="tooltip" data-placement="top" title="CEFCA - Centro de Estudios de Física del Cosmos de Aragón"><img class="mr-3 mb-4 mb-lg-0" src="<?php bloginfo('template_url'); ?>/img/logo_cefca.png" height="42px" alt="CEFCA"></a></li>
+        <h4>SUPPORTERS</h4>
+        <ul class="logos text-center mb-0">
+          <li><a href="http://www.fapesp.br" target="_blank" data-toggle="tooltip" data-placement="top" title="FAPESP - Fundação de Amparo à Pesquisa do Estado de São Paulo"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_fapesp.png" height="42px" alt="FAPESP"></a></li>
+          <li><a href="http://www.cnpq.br" target="_blank" data-toggle="tooltip" data-placement="top" title="CNPq - Conselho Nacional de Desenvolvimento Científico e Tecnológico"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_cnpq.png" height="42px" alt="CNPq"></a></li>
+          <li><a href="https://www.capes.gov.br" target="_blank" data-toggle="tooltip" data-placement="top" title="CAPES - Coordenação de Aperfeiçoamento de Pessoal de Nível Superior"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_capes.png" height="42px" alt="CAPES"></a></li>
+          <li><a href="http://www.faperj.br" target="_blank" data-toggle="tooltip" data-placement="top" title="FAPERJ - Fundação Carlos Chagas Filho de Amparo à Pesquisa do Estado do Rio de Janeiro"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_faperj.png" height="42px" alt="FAPERJ"></a></li>
+          <li><a href="http://www.finep.gov.br" target="_blank" data-toggle="tooltip" data-placement="top" title="FINEP - Financiadora de Estudos e Projetos"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_finep.png" height="42px" alt="FINEP"></a></li>
+        </ul>
+
+        <h4>FOUNDERS</h4>
+        <ul class="logos text-center mb-0">
+          <li><a href="http://www.iag.usp.br" target="_blank" data-toggle="tooltip" data-placement="top" title="IAG - Instituto de Astronomia, Geofísica e Ciências Atmosféricas"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_iagusp.png" width="50px" alt="IAG/USP"></a></li>
+          <li><a href="https://on.br" target="_blank" data-toggle="tooltip" data-placement="top" title="ON - Observatório Nacional"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_ON.png" height="42px" alt="ON"></a></li>
+          <li><a href="http://www.ufs.br" target="_blank" data-toggle="tooltip" data-placement="top" title="UFS - Universidade Federal de Sergipe"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_ufs.png" height="46px" alt="UFS"></a></li>
+          <li><a href="https://ufsc.br" target="_blank" data-toggle="tooltip" data-placement="top" title="UFSC - Universidade Federal de Santa Catarina"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_ufsc2.png" height="46px" alt="UFSC"></a></li>
+          <li><a href="http://www.userena.cl" target="_blank" data-toggle="tooltip" data-placement="top" title="ULS - Universidad de La Serena"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_univ_la_serena2.png" height="46px" alt="ULS"></a></li>
         </ul>
       </div>
     </div>
