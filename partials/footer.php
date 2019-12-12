@@ -42,6 +42,8 @@
           <li><a href="https://www.capes.gov.br" target="_blank" data-toggle="tooltip" data-placement="top" title="CAPES - Coordenação de Aperfeiçoamento de Pessoal de Nível Superior"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_capes.png" height="42px" alt="CAPES"></a></li>
           <li><a href="http://www.faperj.br" target="_blank" data-toggle="tooltip" data-placement="top" title="FAPERJ - Fundação Carlos Chagas Filho de Amparo à Pesquisa do Estado do Rio de Janeiro"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_faperj.png" height="42px" alt="FAPERJ"></a></li>
           <li><a href="http://www.finep.gov.br" target="_blank" data-toggle="tooltip" data-placement="top" title="FINEP - Financiadora de Estudos e Projetos"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_finep.png" height="42px" alt="FINEP"></a></li>
+          <li><a href="https://www.cefca.es" target="_blank" data-toggle="tooltip" data-placement="top" title="CEFCA - Centro de Estudios de Física del Cosmos de Aragón"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_cefca.png" height="42px" alt="CEFCA"></a></li>
+          <li><a href="http://www.inpe.br" target="_blank" data-toggle="tooltip" data-placement="top" title="INPE - Instituto Nacional de Pesquisas Espaciais"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_inpe.png" height="42px" alt="INPE"></a></li>
         </ul>
 
         <h4>FOUNDERS</h4>
