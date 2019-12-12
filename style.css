@@ -86,8 +86,15 @@ ul.navbar-nav li.nav-item a.nav-link {
 }
 
 ul.navbar-nav li.nav-item a.login {
-  background-color: #385e7ded;
-  padding: 0.3rem 1.3rem;
+  color: rgb(156, 180, 202);
+}
+
+@media (min-width: 992px) {
+  ul.navbar-nav li.nav-item a.login {
+    color: #D3DEE8;
+    background-color: #385e7ded;
+    padding: 0.3rem 1.3rem;
+  }
 }
 
 .hero {
