@@ -19,6 +19,15 @@ $is_user_authorization = false;
 $user_authorization_success = false;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $nonce_check = isset($_POST['_wpnonce']) && 
+                wp_verify_nonce($_POST['_wpnonce'], 'splus_user_register');
+  
+  if (!$nonce_check) {
+    $error['security'] = 'Failed security check. Try reload the page';
+  }
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && $nonce_check) {
   $firstname = $_POST['firstname'];
   $lastname = $_POST['lastname'];
   $username = $_POST['username'];
@@ -415,6 +424,8 @@ function valid_class($k, $var) {
         </div>
         <?php endif; ?>
         <form method="POST" action="" id="register_form">
+          <?php wp_nonce_field('splus_user_register'); ?>
+
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="firstname">First Name</label>
