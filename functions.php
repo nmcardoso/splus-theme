@@ -122,7 +122,7 @@ function block_unauthorized_users($user, $username, $password) {
     return $user;
   }
 
-  $auth = get_user_meta($user->ID, 'splus_user_authorized', false);
+  $auth = get_user_meta($user->ID, 'splus_user_authorized', true);
   $user_roles = $user->roles;
   
   if ($auth !== 'true' && count($user_roles) === 1 && in_array('subscriber', $user_roles, true)) {
