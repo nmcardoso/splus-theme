@@ -20,7 +20,10 @@ $visibility = $post_meta['_meta_is_private'][0];
 </section>
 
 <?php
-get_template_part('partials/submenus');
+// TODO: reimplement when public submenus are available
+if (is_user_logged_in()) {
+  get_template_part('partials/submenus');
+}
 ?>
 
 <main class="page-content">
