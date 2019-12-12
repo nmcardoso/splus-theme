@@ -18,19 +18,24 @@ if (is_user_logged_in()) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$creds = array(
-		'user_login' => $_POST['log'],
-		'user_password' => $_POST['pwd'],
-		'remember' => false
-	);
-
-	$user = wp_signon($creds);
-
-	if (is_wp_error($user)) {
-		$error = $user->get_error_message();
+	if (!isset($_POST['_wpnonce']) || 
+			!wp_verify_nonce($_POST['_wpnonce'], 'splus_user_login')) {
+		$error = 'Failed security check. Try reload the page';
 	} else {
-		wp_redirect(home_url());
-		exit;
+		$creds = array(
+			'user_login' => $_POST['log'],
+			'user_password' => $_POST['pwd'],
+			'remember' => false
+		);
+	
+		$user = wp_signon($creds);
+	
+		if (is_wp_error($user)) {
+			$error = $user->get_error_message();
+		} else {
+			wp_redirect(home_url());
+			exit;
+		}
 	}
 }
 
@@ -111,6 +116,7 @@ input.form-control {
 				</div>
 				<?php endif; ?>
 				<form action="" method="POST">
+					<?php wp_nonce_field('splus_user_login'); ?>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text svg-icon icon-lg">
