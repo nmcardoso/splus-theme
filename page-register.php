@@ -473,8 +473,8 @@ function valid_class($k, $var) {
               <select name="position" id="position" class="form-control">
                 <?php
                 $options = array(
-                  'undergraduated' => 'Undergraduated Student',
-                  'graduated' => 'Graduated Student',
+                  'undergraduated' => 'Undergraduate Student',
+                  'graduated' => 'Graduate Student',
                   'professor' => 'Professor',
                   'postdoc' => 'Postdoc',
                   'other' => 'Other'
