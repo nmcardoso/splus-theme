@@ -305,7 +305,7 @@ EMAIL;
 
   $mailer = new Mailer();
   $mailer->setSubject("[SPLUS] Contact Form: $name");
-  $mailer->addAddress('splus.team@yahoo.com', 'SPLUS Staff');
+  $mailer->addAddress(get_option('splus_smtp_email', 'splus.team@yahoo.com'), 'SPLUS Staff');
   $mailer->html($email_content);
   $mailer->send();
 }
