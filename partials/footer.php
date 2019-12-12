@@ -46,7 +46,7 @@
 
         <h4>FOUNDERS</h4>
         <ul class="logos text-center mb-0">
-          <li><a href="http://www.iag.usp.br" target="_blank" data-toggle="tooltip" data-placement="top" title="IAG - Instituto de Astronomia, Geofísica e Ciências Atmosféricas"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_iagusp.png" width="50px" alt="IAG/USP"></a></li>
+          <li><a href="http://usp.br" target="_blank" data-toggle="tooltip" data-placement="top" title="USP - Universidade de São Paulo"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_usp2.png" height="46px" alt="USP"></a></li>
           <li><a href="https://on.br" target="_blank" data-toggle="tooltip" data-placement="top" title="ON - Observatório Nacional"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_ON.png" height="42px" alt="ON"></a></li>
           <li><a href="http://www.ufs.br" target="_blank" data-toggle="tooltip" data-placement="top" title="UFS - Universidade Federal de Sergipe"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_ufs.png" height="46px" alt="UFS"></a></li>
           <li><a href="https://ufsc.br" target="_blank" data-toggle="tooltip" data-placement="top" title="UFSC - Universidade Federal de Santa Catarina"><img class="mr-3 mb-4 mb-lg-3" src="<?php bloginfo('template_url'); ?>/img/logo_ufsc2.png" height="46px" alt="UFSC"></a></li>
