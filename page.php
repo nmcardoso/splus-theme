@@ -1,16 +1,16 @@
 <?php 
-
+add_filter('body_class', function() { return ['d-flex', 'flex-column']; });
 get_header();
-get_template_part('partials/navbar');
-
 ?>
 
-<?php 
+<div style="flex: 1 0 auto;"> <!-- make footer sticky bottom -->
+
+<?php
+get_template_part('partials/navbar');
 
 $p = get_post();
 $post_meta = get_post_meta($p->ID);
 $visibility = $post_meta['_meta_is_private'][0];
-
 ?>
 
 <section class="page-hero">
@@ -45,6 +45,8 @@ if (is_user_logged_in()) {
     </div>
   </section>
 </main>
+
+</div> <!-- footer sticky -->
 
 <?php get_template_part('partials/footer'); ?>
 

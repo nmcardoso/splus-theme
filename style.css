@@ -12,10 +12,12 @@ Text Domain: splus-theme
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
+  min-height: 100%;
 }
 
 img {
