@@ -33,6 +33,14 @@ table.wp-block-table {
   margin-bottom: 1rem;
 }
 
+.page-content h1, .page-content h2, .page-content h3 {
+  font-weight: bold;
+}
+
+.post-content h1, .post-content h2, .post-content h3 {
+  font-weight: bold;
+}
+
 nav.navbar {
   position: fixed;
   width: 100%;
