@@ -18,10 +18,7 @@ $attachment = get_post();
 </section>
 
 <?php
-// TODO: reimplement when public submenus are available
-if (is_user_logged_in()) {
-  get_template_part('partials/submenus');
-}
+get_template_part('partials/submenus');
 ?>
 
 <main class="page-content">
