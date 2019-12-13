@@ -49,6 +49,20 @@ foreach ($all_items as $i) {
 
 $items = get_submenu_items($parent_id, $all_items);
 
+// remove private pages from submenus listing for unauthenticated users
+if (!is_user_logged_in()) {
+  $items = array_reduce($items, function($carry, $item) {
+    $post_meta = get_post_meta($item->object_id);
+    if (isset($post_meta['_meta_is_private']) && 
+        $post_meta['_meta_is_private'][0] == 'private') {
+          return $carry;
+    } else {
+      array_push($carry, $item);
+      return $carry;
+    }
+  }, array());
+}
+
 ?>
 
 <?php if (!empty($items)): ?>
