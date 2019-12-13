@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
   <link href="//db.onlinewebfonts.com/c/dd7e0fcaaf9a62550b7bcfa1b4f0dcd9?family=Plantagenet+Cherokee" rel="stylesheet"
     type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
 
   <title>SPLUS</title>
