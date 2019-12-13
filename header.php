@@ -14,6 +14,7 @@
     type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
+  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/mosaic.css">
 
   <title>SPLUS</title>
 
