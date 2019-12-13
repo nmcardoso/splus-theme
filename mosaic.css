@@ -1,0 +1,74 @@
+.mosaic-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mosaic-gallery .mosaic-item {
+  box-sizing: content-box;
+  /* margin: 10px; */
+  height: 250px; /* fallback */
+  width: 250px; /* fallback */
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  position: relative;
+  background-color: white;
+}
+
+.mosaic-gallery .caption {
+  position: absolute;
+  /* bottom: 5px;
+  left: 20px; */
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  margin-bottom: -20px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .65);
+  opacity: 0.0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mosaic-gallery img {
+  height: 100%;
+  width: 100%;
+  transform: scale(1.0) rotate(0deg);
+  transition: 0.4s ease;
+  object-fit: cover;
+}
+
+.mosaic-gallery .mosaic-item:hover img {
+  transform: scale(1.2) rotate(1.2deg);
+  filter: grayscale(50%);
+}
+
+.mosaic-gallery .mosaic-item:hover .caption {
+  transform: translateY(-5px);
+  opacity: 1.0;
+}
+
+.mosaic-gallery .mosaic-item:hover {
+  cursor: pointer;
+}
+
+.mosaic-gallery .caption p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+.mosaic-gallery .caption>p:nth-child(2) {
+  font-size: 0.8em;
+  opacity: 0.5;
+}
+
+.mosaic-gallery a {
+  color: inherit;
+}
