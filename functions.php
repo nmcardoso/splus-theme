@@ -308,6 +308,10 @@ EMAIL;
   $mailer->addAddress(get_option('splus_smtp_email', 'splus.team@yahoo.com'), 'SPLUS Staff');
   $mailer->html($email_content);
   $mailer->send();
+
+  if (isset($_SERVER['HTTP_REFERER']) && wp_http_validate_url($_SERVER['HTTP_REFERER'])) {
+    wp_redirect($_SERVER['HTTP_REFERER']);
+  }
 }
 
 add_action('admin_post_contact_form', 'contact_form_handler');
