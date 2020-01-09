@@ -28,7 +28,7 @@ $visibility = $post_meta['_meta_is_private'][0];
     <div class="container">
       <?php if (!is_user_logged_in() &&  $visibility === 'private'): ?>
       <div class="jumbotron">
-        <h1 class="display-4">Private Content</h1>
+        <h1 class="display-4 mt-0">Private Content</h1>
         <p class="lead">This content is reserved for authenticated users.</p>
         <hr class="my-4">
         <p><a href="/register">Register</a> a new account or <a href="/login">Login</a> to your account</p>
