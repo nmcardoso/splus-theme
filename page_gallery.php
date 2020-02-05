@@ -81,7 +81,7 @@ get_template_part('partials/submenus');
       <script src="<?php bloginfo('template_url'); ?>/mosaic.js"></script>
       <script>
         const g = document.getElementById('gallery')
-        const data = JSON.parse('<?php echo json_encode($data); ?>')
+        const data = JSON.parse('<?php echo str_replace('\\n', '<br>', json_encode($data)); ?>')
         const M = new Mosaic(data, g)
         M.imagesPerRow({
           small: 2,

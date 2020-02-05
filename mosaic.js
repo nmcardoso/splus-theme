@@ -55,7 +55,7 @@ Mosaic.prototype.render = function () {
           <img src="${image.src}" />
           <div class="caption">
             <p>${image.title}</p>
-            <p class="d-none d-sm-block">${image.caption}</p>
+            ${image.caption ? '<p class="d-none d-sm-block">' + image.caption + '</p>' : ''}
           </div>
         </a>
       </div>

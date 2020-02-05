@@ -59,6 +59,9 @@
 .mosaic-gallery .caption>p:nth-child(2) {
   font-size: 0.8em;
   opacity: 0.5;
+  line-height: 1.5em;
+  height: 1.5em;
+  overflow: hidden;
 }
 
 .mosaic-gallery a {
