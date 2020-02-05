@@ -32,7 +32,7 @@ get_template_part('partials/submenus');
       if ($caption):
       ?>
       <div class="w-100 p-3 p-lg-4 mt-4" style="background-color: #d2d2d2; border-radius: 4px;">
-        <p class="mb-0" style="font-size: 1.1rem;"><b>Description:</b> <?php echo $caption; ?></p>
+        <p class="mb-0" style="font-size: 1.1rem; white-space:pre-line;"><b>Description:</b> <?php echo $caption; ?></p>
       </div>
       <?php endif; ?>
     </div>
