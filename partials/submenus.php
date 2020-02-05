@@ -68,9 +68,9 @@ if (!is_user_logged_in()) {
 <?php if (!empty($items)): ?>
 <div class="container-fluid">
   <div id="submenu">
-    <ul class="items d-flex justify-content-end">
+    <ul class="items d-sm-flex d-block pl-0 pr-md-3">
       <?php foreach($items as $i): ?>
-      <li class="item">
+      <li class="item ml-sm-4 my-2 text-right">
         <a href="<?php echo $i->url; ?>" class="item-link"><?php echo $i->title; ?></a>
       </li>
       <?php endforeach; ?>

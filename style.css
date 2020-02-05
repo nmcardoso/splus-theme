@@ -371,14 +371,13 @@ main.page-content section h1 {
   padding-bottom: 1.2rem;
 }
 
-#submenu ul.items {
-  list-style: none;
-  padding-right: 2rem;
+#submenu ul {
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
-#submenu ul.items li.item {
-  /* display: inline-block; */
-  margin-left: 2rem;
+#submenu ul.items {
+  list-style: none;
 }
 
 #submenu ul.items li.item:first-of-type {
