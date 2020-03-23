@@ -405,7 +405,7 @@ function valid_class($k, $var) {
       <div class="card-header">
         <div class="d-flex justify-content-between align-items-center">
           <h3 class="pt-2">REGISTER</h3>
-          <a href="/"><img src="<?php bloginfo('template_url'); ?>/img/splus@2x.png" height="42px" alt="SPLUS"></a>
+          <a href="/"><img src="<?php bloginfo('template_url'); ?>/img/splus-cropped@2x.png" height="42px" alt="SPLUS"></a>
         </div>
       </div>
       <div class="card-body">
