@@ -105,9 +105,10 @@ input.form-control {
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
-				<h3>Sign In</h3>
-				<div class="d-flex justify-content-end social_icon">
-				</div>
+				<div class="d-flex justify-content-between align-items-center">
+          <h3 class="pt-2">Sign In</h3>
+          <a href="/"><img src="<?php bloginfo('template_url'); ?>/img/splus-cropped@2x.png" height="42px" alt="SPLUS"></a>
+        </div>
 			</div>
 			<div class="card-body">
 				<?php if (!empty($error)): ?>
