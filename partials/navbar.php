@@ -1,6 +1,6 @@
 <nav id="navbar" class="navbar navbar-dark navbar-expand-lg navbar-toggleable-md">
   <a class="navbar-brand" href="/">
-    <img src="<?php bloginfo('template_url'); ?>/img/splus-cropped@2x.png" height="32px" alt="">
+    <img src="<?php bloginfo('template_url'); ?>/img/splus-cropped@2x.png" height="32px" alt="splus logo">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
