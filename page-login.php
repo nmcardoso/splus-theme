@@ -112,7 +112,7 @@ input.form-control {
 			</div>
 			<div class="card-body">
 				<div class="alert alert-warning" style="font-size:.9rem;">
-					[March/2020] Due to maintenance problems, all accounts were lost. A notification will be sent by email for all members when registration in opened again. Sorry for the inconvenience.
+					[March/2020] Due to maintenance problems, all accounts were lost. A notification will be sent by email for all members when registration is opened again. Sorry for the inconvenience.
 				</div>
 				<?php if (!empty($error)): ?>
 				<div class="alert alert-danger" style="font-size:.9rem;">
