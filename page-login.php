@@ -116,7 +116,7 @@ input.form-control {
 				</div>
 				<?php if (!empty($error)): ?>
 				<div class="alert alert-danger" style="font-size:.9rem;">
-				<?php echo $error; ?>
+					<?php echo $error; ?>
 				</div>
 				<?php endif; ?>
 				<form action="" method="POST">
