@@ -93,6 +93,7 @@ function theme_version_setup($upgrader, $hook_extra) {
   if ($hook_extra['action'] == 'update' && !in_array('splus-theme', $hook_extra['themes'])) {
     return;
   }
+  
 
   $response = wp_remote_get('https://raw.githubusercontent.com/nmcardoso/splus-theme/zipball/version.txt');
   if (is_wp_error($response)) {
