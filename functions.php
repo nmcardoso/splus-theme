@@ -68,7 +68,6 @@ function theme_update($transient) {
   $curr_version = get_site_option('splus_theme_version', 'none');
   $remote_version = $response['body'];
   
-  
   if ($curr_version !== $remote_version) {
     $fields = array();
     $fields['theme'] = 'splus-theme';
