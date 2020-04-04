@@ -70,6 +70,7 @@ function theme_update($transient) {
   $curr_version = $curr_theme['Version'];
   $remote_version = $response['body'];
   
+  
   if ($curr_version !== $remote_version) {
     $fields = array();
     $fields['theme'] = 'splus-theme';
