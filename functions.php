@@ -90,18 +90,8 @@ add_filter('pre_set_site_transient_update_themes', 'theme_update');
 
 function theme_version_setup($upgrader, $hook_extra) {
   // Check if this theme was successfully updated before update version
-  if (is_array($hook_extra) && 
-      array_key_exists('action', $hook_extra) && 
-      array_key_exists('type', $hook_extra) && 
-      array_key_exists('themes', $hook_extra)) {
-    if ($hook_extra['action'] == 'update' && 
-        $hook_extra['type'] == 'theme' && 
-        is_array($hook_extra['themes']) && 
-        !empty($hook_extra['themes'])) {
-      if (!in_array('splus-theme', $hook_extra['themes'])){
-        return;
-      }
-    }
+  if ($hook_extra['action'] == 'update' && !in_array('splus-theme', $hook_extra['themes'])) {
+    return;
   }
 
   $response = wp_remote_get('https://raw.githubusercontent.com/nmcardoso/splus-theme/zipball/version.txt');
