@@ -81,6 +81,7 @@ function theme_update($transient) {
     //set_site_transient('update_themes', $transient);
   }
   
+  
   return $transient;
 }
 
