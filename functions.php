@@ -65,9 +65,7 @@ function theme_update($transient) {
     return $transient;
   }
 
-  $curr_theme = wp_get_theme();
-  // $curr_version = get_site_option('splus_theme_version', 'none');
-  $curr_version = $curr_theme['Version'];
+  $curr_version = get_site_option('splus_theme_version', 'none');
   $remote_version = $response['body'];
   
   if ($curr_version !== $remote_version) {
