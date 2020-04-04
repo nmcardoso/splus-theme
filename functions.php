@@ -62,7 +62,7 @@ function theme_update($transient) {
 
   $response = wp_remote_get('https://raw.githubusercontent.com/nmcardoso/splus-theme/zipball/version.txt');
   if (is_wp_error($response)) {
-    return;
+    return $transient;
   }
 
   $curr_version = get_site_option('splus_theme_version', 'none');
