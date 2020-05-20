@@ -23,6 +23,8 @@
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/mosaic.css">
 
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap" rel="stylesheet">
+
   <title>SPLUS</title>
 
   <?php wp_head(); ?>
