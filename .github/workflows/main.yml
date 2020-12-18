@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: 'Template Build'
+    - name: 'Build'
       run: ./ci-scripts/build.sh
     - name: 'Deploy'
       run: |
