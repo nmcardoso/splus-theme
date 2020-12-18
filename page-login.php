@@ -112,7 +112,7 @@ input.form-control {
 			</div>
 			<div class="card-body">
 				<div class="alert alert-warning" style="font-size:.9rem;">
-					[March/2020] Due to maintenance problems, all accounts were lost. A notification will be sent by email for all members when registration is opened again. Sorry for the inconvenience.
+          Members and external collaborators should use the password provided to them by Lilianne Nakozono (website) or Roderik Overzier (Project Scientist).
 				</div>
 				<?php if (!empty($error)): ?>
 				<div class="alert alert-danger" style="font-size:.9rem;">
@@ -137,19 +137,10 @@ input.form-control {
 						</div>
 						<input type="password" class="form-control" placeholder="password" name="pwd">
 					</div>
-					<!--<div class="row align-items-center">
-						<input type="checkbox">
-            <label for="">Remember me</label>
-					</div>-->
 					<div class="form-group">
 						<input type="submit" value="Login" class="btn base float-right mt-4">
 					</div>
 				</form>
-			</div>
-			<div class="card-footer">
-				<div class="d-flex justify-content-end">
-					<a class="text-light" href="/register">Register</a>
-				</div>
 			</div>
 		</div>
 	</div>
