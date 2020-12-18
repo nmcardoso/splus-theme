@@ -13,7 +13,7 @@ script:
 
 deploy:
   provider: script
-  skip-cleanup: true
+  skip_cleanup: true
   script: 
     - ./ci-scripts/deploy.sh
   on:
