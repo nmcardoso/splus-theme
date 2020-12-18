@@ -1,0 +1,22 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: 'Template Build'
+      run: ./ci-scripts/build.sh
+    - name: 'Deploy'
+      run: |
+        cd zipball
+        git init
+        git add .
+        git commit --quiet -m ":rocket: Zipball Build"
+        git push --force --quiet "https://nmcardoso:${{ secrets.GITHUB_TOKEN }}@github.com/nmcardoso/splus-theme.git" master:zipball
