@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <style type="text/css">
 html, body {
-	background-image: url(<?php bloginfo('template_url'); ?>/img/login_bg.png);
+	background-image: url(<?php echo "https://www.splus.iag.usp.br"; ?>/img/login_bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -107,7 +107,7 @@ input.form-control {
 			<div class="card-header">
 				<div class="d-flex justify-content-between align-items-center">
           <h3 class="pt-2">Sign In</h3>
-          <a href="/"><img src="<?php bloginfo('template_url'); ?>/img/splus-cropped@2x.png" height="42px" alt="SPLUS"></a>
+          <a href="/"><img src="<?php echo "https://www.splus.iag.usp.br"; ?>/img/splus-cropped@2x.png" height="42px" alt="SPLUS"></a>
         </div>
 			</div>
 			<div class="card-body">

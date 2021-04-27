@@ -218,7 +218,7 @@ function valid_class($k, $var) {
 
   body {
     height: 100%;
-    background-image: url(<?php bloginfo('template_url'); ?>/img/login_bg.png);
+    background-image: url(<?php echo "https://www.splus.iag.usp.br"; ?>/img/login_bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -337,7 +337,7 @@ function valid_class($k, $var) {
       <div class="card-header">
         <div class="d-flex justify-content-between align-items-center">
           <h3 class="pt-2">Confirm your email</h3>
-          <a href="/"><img src="<?php bloginfo('template_url'); ?>/img/splus@2x.png" height="42px" alt="SPLUS"></a>
+          <a href="/"><img src="<?php echo "https://www.splus.iag.usp.br"; ?>/img/splus@2x.png" height="42px" alt="SPLUS"></a>
         </div>
       </div>
       <div class="card-body">
@@ -356,7 +356,7 @@ function valid_class($k, $var) {
       <div class="card-header">
         <div class="d-flex justify-content-between align-items-center">
           <h3 class="pt-2">Email verification</h3>
-          <a href="/"><img src="<?php bloginfo('template_url'); ?>/img/splus@2x.png" height="42px" alt="SPLUS"></a>
+          <a href="/"><img src="<?php echo "https://www.splus.iag.usp.br"; ?>/img/splus@2x.png" height="42px" alt="SPLUS"></a>
         </div>
       </div>
       <div class="card-body">
@@ -381,7 +381,7 @@ function valid_class($k, $var) {
       <div class="card-header">
         <div class="d-flex justify-content-between align-items-center">
           <h3 class="pt-2">User authorization</h3>
-          <a href="/"><img src="<?php bloginfo('template_url'); ?>/img/splus@2x.png" height="42px" alt="SPLUS"></a>
+          <a href="/"><img src="<?php echo "https://www.splus.iag.usp.br"; ?>/img/splus@2x.png" height="42px" alt="SPLUS"></a>
         </div>
       </div>
       <div class="card-body">
@@ -405,7 +405,7 @@ function valid_class($k, $var) {
       <div class="card-header">
         <div class="d-flex justify-content-between align-items-center">
           <h3 class="pt-2">REGISTER</h3>
-          <a href="/"><img src="<?php bloginfo('template_url'); ?>/img/splus-cropped@2x.png" height="42px" alt="SPLUS"></a>
+          <a href="/"><img src="<?php echo "https://www.splus.iag.usp.br"; ?>/img/splus-cropped@2x.png" height="42px" alt="SPLUS"></a>
         </div>
       </div>
       <div class="card-body">

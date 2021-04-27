@@ -63,7 +63,7 @@ get_template_part('partials/navbar');
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
-            <img src="<?php bloginfo('template_url'); ?>/img/photo1.png" width="100%" alt="">
+            <img src="<?php echo "https://www.splus.iag.usp.br"; ?>/img/photo1.png" width="100%" alt="">
           </div>
           <div class="col-lg-8">
             <h1>…WITH A 86-CM TELESCOPE LOCATED IN CTIO.</h1>
