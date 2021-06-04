@@ -110,7 +110,7 @@ get_header();
           <?php
           $announcements_cat = get_cat_ID("announcements");
           $announcements_query = array(
-            "numberposts" => 5,
+            "numberposts" => 25,
             "category" => $announcements_cat,
             "orderby" => "date",
             "order" => "DESC"
