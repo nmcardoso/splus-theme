@@ -102,6 +102,7 @@ add_action('upgrader_process_complete', 'theme_version_setup');
 
 function theme_setup() {
   register_menus();
+  add_theme_support('post-thumbnails');
   //theme_version_setup();
 }
 
