@@ -407,3 +407,57 @@ main.page-content section h1 {
 #submenu a.item-link:visited {
   text-decoration: none;
 }
+
+.announcements .card-body p {
+  margin-bottom: 0.3rem !important;
+}
+
+.announcements-wrapper {
+  max-height: 400px;
+  overflow-y: auto;
+  padding : 8px;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 4px;
+}
+
+.pr-wrapper .carousel-text {
+  background-color: rgba(0,0,0,.35);
+  border-radius: 4px;
+}
+
+.pr-wrapper .carousel-text .description {
+  display: -webkit-box;
+  display: -ms-box;
+  max-width: 100%;
+  -webkit-line-clamp: 2;
+  -ms-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+}
+
+.pr-wrapper a.caption-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.pr-wrapper a.caption-link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.pr-wrapper a.caption-link:hover h5 {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.pr-wrapper a.caption-link:hover .carousel-text {
+  background-color: rgba(0,0,0,.6);
+}
+
+.pr-wrapper a.caption-link:visited {
+  color: #fff;
+  text-decoration: none;
+}
