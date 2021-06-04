@@ -51,19 +51,23 @@ get_header();
                 class="carousel-item <?php echo (key($pr_posts) === $key) ? "active" : "" ?>" 
                 style="height: 400px;">
                 <?php if (has_post_thumbnail()): ?>
-                  <img 
-                    src="<?php echo get_the_post_thumbnail_url($post, "large"); ?>" 
-                    height="100%"
-                    width="100%"
-                    class="d-block w-100" 
-                    alt="<?php echo get_the_title(); ?>" />
+                  <a href="<?php echo get_the_permalink(); ?>">
+                    <img 
+                      src="<?php echo get_the_post_thumbnail_url($post, "large"); ?>" 
+                      height="100%"
+                      width="100%"
+                      class="d-block w-100" 
+                      alt="<?php echo get_the_title(); ?>" />
+                  </a>
                 <?php else: ?>
-                  <img
-                    src="<?php bloginfo('template_url'); ?>/img/stars-placeholder.jpg"
-                    height="100%"
-                    width="100%"
-                    class="d-block w-100"
-                    alt="<?php echo get_the_title(); ?>" />
+                  <a href="<?php echo get_the_permalink(); ?>">
+                    <img
+                      src="<?php bloginfo('template_url'); ?>/img/stars-placeholder.jpg"
+                      height="100%"
+                      width="100%"
+                      class="d-block w-100"
+                      alt="<?php echo get_the_title(); ?>" />
+                  </a>
                 <?php endif; ?>
                 <div class="carousel-caption d-none d-md-block">
                   <a href="<?php echo get_the_permalink(); ?>" class="caption-link">
