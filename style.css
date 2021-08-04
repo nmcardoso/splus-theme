@@ -461,3 +461,7 @@ main.page-content section h1 {
   color: #fff;
   text-decoration: none;
 }
+
+.carousel-item img {
+  object-fit: cover;
+}

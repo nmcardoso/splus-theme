@@ -120,7 +120,7 @@ get_header();
           foreach ($announcements_posts as $post): setup_postdata($post);
           ?>
           <div class="announcements card w-100 mb-2">
-            <div class="card-body px-3 py-2">
+            <div class="card-body px-3 py-3">
               <h6 class="card-title mb-1" style="font-weight: bold;"><?php the_title(); ?></h6>
               <?php the_content(); ?>
               <small class="d-block text-right text-muted my-0 py-0"><?php echo get_the_date("M d, Y H:i"); ?></small>
