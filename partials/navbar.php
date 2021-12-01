@@ -36,18 +36,6 @@
       <li class="nav-item">
         <a class="nav-link <?php echo $active; ?>" href="<?php echo $item->url; ?>"><?php echo $item->title; ?></a>
       </li>
-      <?php
-      endforeach;
-      if (!is_user_logged_in()):
-      ?>
-      <li class="nav-item">
-        <a class="nav-link login" href="/login">Login</a>
-      </li>
-      <?php else: ?>
-      <li class="nav-item">
-        <a class="nav-link login" href="/login?action=logout">Logout</a>
-      </li>
-      <?php endif; ?>
     </ul>
   </div>
 </nav>
